@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', sans-serif;
+}
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+	transition: background-image 0.5s ease;
+	
+	background: url('background (1).jpg')no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.form-box{
+	position: relative;
+	width: 650px;
+	height: 390px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 20px;
+	backdrop-filter: blur(15px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h2{
+	font-size: 45px;
+	color: #000;
+	text-align:center;
+	margin-top: -30px;
+	transition: color 0.5s ease;
+}
+.countdown {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	text-align:center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.time-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	color: #000;
+	font-family: sans-serif;
+	padding: 0 30px;
+	border-right: 1px solid #000;
+	transition: color 0.5s ease, border-color 0.5s ease;
+}
+.time-section:last-child {
+	border: none;
+}
+.count {
+	font-size: 65px;
+}
+.units {
+	font-size: 20px;
+}
+input[type="checkbox"] {
+	display: none;
+}
+label {
+	position:absolute;
+	top: 25px;
+	right: 25px;
+	border: 2px solid #ccc;
+	border-radius: 50px;
+	padding: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+.fa-sun {
+	color: orange;
+	font-size: 40px;
+	text-shadow: 0 0 20px orange;
+	transform: translateX(35px);
+	transition: .5s;
+}
+.fa-moon {
+	color: white;
+	font-size: 40px;
+	text-shadow: 0 0 20px white;
+	opacity: 0;
+	transform: translateX(0px);
+	transition: .5s;
+}
+#switch-theme:checked ~ label > .fa-sun {
+	opacity: 0;
+	transform: translateX(0px);
+}
+#switch-theme:checked ~ label > .fa-moon {
+	opacity: 1;
+	transform: translateX(-35px);
+}
+#switch-theme:checked ~ section h2 {
+  color: #fff;
+}
+#switch-theme:checked ~ section {
+  background: url('background (2).jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#switch-theme:checked ~ section .time-section {
+	color: #fff;
+	border-right: 1px solid #fff;
+}
+#switch-theme:checked ~ section .time-section:last-child {
+	border: none;
+}
